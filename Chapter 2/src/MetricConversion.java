@@ -4,8 +4,8 @@ public class MetricConversion {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		final double METERS_TO_INCHES = 39.3701;
-		final double INCHES_TO_FEET = 12;
-		final double FEET_TO_MILES = 5280;
+		final int INCHES_TO_FEET = 12;
+		final int FEET_TO_MILES = 5280;
 		
 		System.out.print("Enter your measurement in meters: ");
 		int meters = input.nextInt();
