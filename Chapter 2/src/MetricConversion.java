@@ -13,8 +13,16 @@ public class MetricConversion {
 		inches = inches - (feet * 12);
 		feet = feet - (miles * 5280);
 		
-		System.out.print(meters + " meters is " + miles + " miles, " + feet + " feet, and ");
-		System.out.printf("%.2f", inches);
+		System.out.print(meters + " meters is ");
+		if (miles > 0) {
+			System.out.print(miles + " miles, ");
+		}
+		if (feet > 0 && miles > 0) {
+			System.out.print(feet + " feet, and ");
+		} else if (feet > 0) {
+			System.out.print(feet + " feet and ");
+		}
+		System.out.printf("%.1f", inches);
 		System.out.print(" inches long.");
 	}
 }
