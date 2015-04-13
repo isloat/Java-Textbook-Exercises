@@ -3,15 +3,18 @@ import java.util.Scanner;
 public class MetricConversion {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		final double METERS_TO_INCHES = 39.3701;
+		final double INCHES_TO_FEET = 12;
+		final double FEET_TO_MILES = 5280;
 		
 		System.out.print("Enter your measurement in meters: ");
 		int meters = input.nextInt();
 	
-		double inches = meters * 39.3701;
-		int feet = (int) inches / 12;
-		int miles = (int) feet / 5280;
-		inches = inches - (feet * 12);
-		feet = feet - (miles * 5280);
+		double inches = meters * METERS_TO_INCHES;
+		int feet = (int) inches / INCHES_TO_FEET;
+		int miles = (int) feet / FEET_TO_MILES;
+		inches = inches - (feet * INCHES_TO_FEET);
+		feet = feet - (miles * FEET_TO_MILES);
 		
 		System.out.print(meters + " meters is ");
 		if (miles > 0) {
