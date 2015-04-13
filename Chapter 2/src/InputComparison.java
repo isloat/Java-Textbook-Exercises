@@ -18,5 +18,12 @@ public class InputComparison {
 		int integerMinimum = Math.min(integerOne, integerTwo);
 		
 		System.out.println("\nYour two numbers are " + integerOne + " and " + integerTwo + ".");
+		System.out.printf("\nSum:        %9d", integerSum);
+		System.out.printf("\nDifference: %9d", integerDifference);
+		System.out.printf("\nProduct:    %9d", integerProduct);
+		System.out.printf("\nAverage:    %12.2f", integerAverage);
+		System.out.printf("\nDistance:   %9d", integerDistance);
+		System.out.printf("\nMaximum:    %9d", integerMaximum);
+		System.out.printf("\nMinimum:    %9d", integerMinimum);
 	}
 }
