@@ -13,7 +13,9 @@ public class MilitaryTime {
 		int firstMinutes = firstTime / 100;
 		firstMinutes = firstMinutes * 60 + firstTime % 100; // convert time into minutes;
 		int secondMinutes = secondTime / 100;
-		secondMinutes = secondMinutes * 60 + secondTime % 100; // above
+		secondMinutes = secondMinutes * 60 + secondTime % 100; // see above
+		
+		//initialize
 		int timeDiff = 0;
 		int timeHours = 0;
 		int timeMinutes = 0;
