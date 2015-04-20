@@ -10,7 +10,7 @@ public class DrawSquares {
 		
 		for (int i = 1; i <= integer; i++) {
 			if (i == 1 || i == integer) {
-				for (int j = 0; j <= integer * 2; j++) {
+				for (int j = 0; j < integer * 2 + 1; j++) {
 					if (j == integer) {
 						System.out.print(" ");
 					} else {
