@@ -7,6 +7,7 @@ public class DrunkardWalk {
 		final int EAST = 1;
 		final int SOUTH = 2;
 		final int WEST = 3;
+		final int DIRECTION = 4; // Total directions to choose from
 
 		int x = 0;
 		int y = 0;
@@ -15,7 +16,7 @@ public class DrunkardWalk {
 		System.out.println("The drunkard starts at (" + x + ", " + y + ").");
 		
 		for (int i = 0; i < 100; i++) { // 100 intersections
-			direction = random.nextInt(4);
+			direction = random.nextInt(DIRECTION);
 			
 			if (direction == NORTH) {
 				y++;
