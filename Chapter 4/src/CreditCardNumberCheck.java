@@ -31,7 +31,6 @@ public class CreditCardNumberCheck {
 		}
 		
 		int finalDigit = (sumEven + sumOdd) % 10; // check final digit of the total sum -- if it's 0, pass. If not, test for what the checkDigit needs to be.
-		System.out.println(finalDigit);
 		
 		if (finalDigit == 0) {
 			isValid = true;
@@ -39,7 +38,6 @@ public class CreditCardNumberCheck {
 			isValid = false;
 			
 			int digitChange = Math.abs(finalDigit - checkDigit);
-			System.out.println(digitChange);
 			
 			if (checkDigit + digitChange > 9) {
 				checkDigit -= finalDigit;
