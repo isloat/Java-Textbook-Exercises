@@ -1,6 +1,7 @@
 import java.util.*;
 
-/* This program will read in a certain amount of inputs from the user
+/* 
+ * This program will read in a certain amount of inputs from the user
  * then test whether or not these inputs validate to a Magic Square.
  * 
  * A Magic Square is a n x n matrix filled with the numbers 1 ... n^2, 
@@ -24,19 +25,24 @@ public class MagicSquares {
 			}
 		}
 		
+		drawSquare(square);
+		
+		if (isMagicSquare(square)) { // validate
+			System.out.println("\nThis is a magic square.");
+		} else {
+			System.out.println("\nThis is not a magic square.");
+		}
+	}
+	
+	public static void drawSquare(int[][] square) {
 		System.out.println();
+		
 		for (int i = 0; i < MATRIX_SIDE; i++) { // draw the square
 			for (int j = 0; j < MATRIX_SIDE; j++) {
 				System.out.print(square[i][j] + " ");
 			}
 			
 			System.out.println();
-		}
-		
-		if (isMagicSquare(square)) { // validate
-			System.out.println("\nThis is a magic square.");
-		} else {
-			System.out.println("\nThis is not a magic square.");
 		}
 	}
 	
