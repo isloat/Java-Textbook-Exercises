@@ -7,12 +7,12 @@ public class AsteriskChart {
 		
 		int numberBars = 0;
 		
+		System.out.print("How many numbers will you want to convert to bar graph? ");
+		numberBars = input.nextInt();
+		
 		int inputValue = 0;
 		int maximum = 0;
 		int minimum = 0;
-		
-		System.out.print("How many numbers will you want to convert to bar graph? ");
-		numberBars = input.nextInt();
 		
 		for (int i = 0; i < numberBars; i++) {
 			System.out.print("Enter a number: ");
@@ -33,45 +33,54 @@ public class AsteriskChart {
 		int total = 0;
 		double negativeLengthMax = 0;
 		double shrinkValue = 0;
-		double spaceToCenter = 0;
+		double spacesToDraw = 0;
 		
 		if (minimum < 0) {
-			total = (minimum * -1) + maximum; // find out the absolute length
-			shrinkValue = (double) total / MAX_LENGTH; // find out proportion of absolute length to maximum length
-			negativeLengthMax = Math.floor((double) (minimum * -1) / shrinkValue); // max negative asterisks
+			// Calculate absolute length.
+			total = (minimum * -1) + maximum;
+			// Calculate proportion of absolute length to maximum length.
+			shrinkValue = (double) total / MAX_LENGTH;
+			 // Set max negative asterisks.
+			negativeLengthMax = Math.floor((double) (minimum * -1) / shrinkValue);
 		} else {
-			shrinkValue = (double) maximum / MAX_LENGTH; // proportion of absolute length to max length
-			negativeLengthMax = 0; // not used here
-			spaceToCenter = 0; // not used here
+			 // Set the proportion of absolute length to max length.
+			shrinkValue = (double) maximum / MAX_LENGTH;
 		}
 		
-		for (int i = 0; i < values.size(); i++) { // cycle through entire arraylist
-			if (values.get(i) > 0) { // if value is positive
-				asterisks = Math.floor(values.get(i) / shrinkValue); // adjust value
+		for (int i = 0; i < values.size(); i++) {
+			if (values.get(i) > 0) { 
+				asterisks = Math.floor(values.get(i) / shrinkValue);
+				spacesToDraw = negativeLengthMax;
 				
-				for (int j = 0; j < negativeLengthMax; j++) { // print spaces until zero point reached
+				// Print spaces until zero point reached.
+				for (int j = 0; j < spacesToDraw; j++) { 
 					System.out.print(" ");
 				}
 				
-				for (int j = 0; j < asterisks; j++) { // print asterisks until proportional bar is created
+				// Print asterisks until proportional bar is created.
+				for (int j = 0; j < asterisks; j++) {
 					System.out.print("*");
 				}
 				
 				System.out.println();
-			} else if (values.get(i) < 0) { // if value is negative
-				asterisks = Math.floor((values.get(i) * -1) / shrinkValue); // adjust the value
-				spaceToCenter = negativeLengthMax - asterisks; // space down from maximum negative length to where negative-bar starts 
+			} else if (values.get(i) < 0) {
+				asterisks = Math.floor((values.get(i) * -1) / shrinkValue);
+				/*  This is the reverse of the behavior in above if-clause. We want to
+				 *  space out the difference between the negative max and the current
+				 *  negative bar.
+				 */
+				spacesToDraw = negativeLengthMax - asterisks;
 						
-				for (int j = 0; j < spaceToCenter; j++) { // print spaces until start drawing bar
+				for (int j = 0; j < spacesToDraw; j++) {
 					System.out.print(" ");
 				}
 				
-				for (int j = 0; j < asterisks; j++) { // print asterisks to zero point
+				for (int j = 0; j < asterisks; j++) {
 					System.out.print("*");
 				}
 				
 				System.out.println();
-			} else System.out.println(); // zero point = no bar drawn (TODO: fix?)
+			} else System.out.println();
 		}
 	}
 }
