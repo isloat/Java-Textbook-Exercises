@@ -1,6 +1,13 @@
 import java.io.*;
 import java.util.*;
 
+/*
+ * This program will read a file of user choice and print all lines
+ * in that file to a new file. While printing over the lines, it will add 
+ * numbering to each line.
+ * 
+ * This program is capable of accepting command line input.
+ */
 public class CmdAddLineNumbers {
 	static int lineNumber = 1;
 	
