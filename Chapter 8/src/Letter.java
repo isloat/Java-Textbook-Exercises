@@ -31,4 +31,3 @@ public class Letter {
 		return text;
 	}
 }
-
