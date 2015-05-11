@@ -3,6 +3,7 @@
  * The bug moves either to the right or left. 
  */
 public class Bug {
+	// Tester for the Bug class.
 	public static void main(String[] args) {
 		Bug heracross = new Bug(10);
 		heracross.move();
