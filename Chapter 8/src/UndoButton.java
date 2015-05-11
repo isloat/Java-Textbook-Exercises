@@ -7,7 +7,6 @@
  * 
  * Extension of Exercise 8.2 from the book.
  */
-
 public class UndoButton {
 	private int value;
 	

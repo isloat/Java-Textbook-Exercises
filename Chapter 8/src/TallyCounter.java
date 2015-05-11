@@ -4,7 +4,6 @@
  * 
  * This modifies Exercise 8.2.
  */
-
 public class TallyCounter {
 	private int value;
 	private int maximum;
