@@ -1,4 +1,4 @@
-/* Extends an earlier example in the chapter by adding a class NumericQuestion.
+/* Extends an earlier example (Question) in the chapter by adding a class NumericQuestion.
  * 
  * If response and expected answer differs by no more than 0.01, accept response as correct.
  */
