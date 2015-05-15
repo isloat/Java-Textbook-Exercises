@@ -24,7 +24,14 @@ public class Question {
 	}
 	
 	public boolean checkAnswer(String response) {
-		return response.equals(answer);
+		// We want to ignore excess whitespace, but we don't want to wholly ignore whitespace.
+		// Consider the difference between PENIS and PEN IS.
+		if (response.trim().replaceAll("\\s+", " ").equalsIgnoreCase(answer.trim().replaceAll("\\s+", " "))) {
+			// Now ignore character case.
+			return response.toLowerCase().equals(answer.toLowerCase());
+		} else {
+			return false;
+		}
 	}
 	
 	public void display() {
