@@ -27,4 +27,17 @@ public class ChoiceQuestion extends Question {
 			setAnswer(choiceString);
 		}
 	}
+	
+	/**
+	 * Displays the question.
+	 */
+	public void display() {
+		// Display the question text.
+		super.display();
+		// Display the answer choices.
+		for (int i = 0; i < choices.size(); i++) {
+			int choiceNumber = i + 1;
+			System.out.println(choiceNumber + ": " + choices.get(i));
+		}
+	}
 }

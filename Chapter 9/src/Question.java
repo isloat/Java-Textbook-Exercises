@@ -28,7 +28,7 @@ public class Question {
 	
 	/**
 	 * Adds text to the question text.
-	 * @param additionalText 
+	 * @param additionalText The text to add.
 	 */
 	public void addText(String additionalText) {
 		text += " " + additionalText;
