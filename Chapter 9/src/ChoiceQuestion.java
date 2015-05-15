@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- *  Extends Question to allow for multi-choice questions.
+ *  A question with multiple choices.
  */
 public class ChoiceQuestion extends Question {
 	private ArrayList<String> choices;

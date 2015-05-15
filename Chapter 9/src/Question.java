@@ -27,6 +27,15 @@ public class Question {
 	}	
 	
 	/**
+	 * Adds text to the question text.
+	 * @param additionalText The text to add.
+	 */
+	public void addText(String additionalText) {
+		text += " " + additionalText;
+	}
+	
+
+	/**
 	 * Sets the answer for this question.
 	 * @param correctResponse The correct answer.
 	 */
