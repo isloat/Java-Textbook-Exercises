@@ -24,7 +24,7 @@ public class Question {
 	 */
 	public void setText(String questionText) {
 		text = questionText;
-	}	
+	}
 	
 	/**
 	 * Adds text to the question text.
@@ -34,7 +34,6 @@ public class Question {
 		text += " " + additionalText;
 	}
 	
-
 	/**
 	 * Sets the answer for this question.
 	 * @param correctResponse The correct answer.
@@ -47,6 +46,8 @@ public class Question {
 	 * Checks a given response for correctness.
 	 * @param response The response to check.
 	 * @return true if the response was correct, false otherwise.
+	 * 
+	 * TODO: Does NOT ignore excess whitespace. 
 	 */
 	public boolean checkAnswer(String response) {
 		// We want to ignore excess whitespace, but we don't want to wholly ignore whitespace.
