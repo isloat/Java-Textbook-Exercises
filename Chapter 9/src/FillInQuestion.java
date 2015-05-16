@@ -16,7 +16,8 @@ public class FillInQuestion extends Question {
 		String question = parse.next();
 		String answer = parse.next();
 		
-		question += "_____" + parse.next();
+		// TODO: Test this
+		question += "_" + parse.next();
 		parse.close();
 		
 		super.setText(question);

@@ -12,14 +12,7 @@
  */
 public class AnyCorrectChoiceQuestion extends ChoiceQuestion {
 	private String allAnswers;
-	
-	/**
-	 * Constructor.
-	 */
-	public AnyCorrectChoiceQuestion() {
-		super();
-	}
-	
+
 	/**
 	 * Calls setText, but also adds instruction to the question text.
 	 * 
@@ -45,12 +38,5 @@ public class AnyCorrectChoiceQuestion extends ChoiceQuestion {
 	 */
 	public boolean checkAnswer(String response) {
 		return allAnswers.contains(response);
-	}
-	
-	/**
-	 * Displays the question.
-	 */
-	public void display() {
-		super.display();
 	}
 }

@@ -11,6 +11,7 @@ public class NumericQuestion extends Question {
 	
 	public boolean checkAnswer(String response) {
 		double responseDouble = Double.parseDouble(response);
+		
 		return (Math.abs(responseDouble - answer) <= 0.01);
 	}
 }
