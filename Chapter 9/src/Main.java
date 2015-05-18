@@ -21,6 +21,7 @@ public class Main {
 		q.display();
 		System.out.print("Enter your answer: ");
 		String response = input.nextLine();
+		input.close();
 		
 		System.out.println(q.checkAnswer(response));
 	}
