@@ -47,17 +47,15 @@ public class Question {
 	 * @param response The response to check.
 	 * @return true if the response was correct, false otherwise.
 	 * 
-	 * TODO: Does NOT ignore excess whitespace. 
+	 * TODO: Test this.
 	 */
 	public boolean checkAnswer(String response) {
 		// We want to ignore excess whitespace, but we don't want to wholly ignore whitespace.
 		// Consider the difference between PENIS and PEN IS.
-		if (response.trim().replaceAll("\\s+", " ").equalsIgnoreCase(answer.trim().replaceAll("\\s+", " "))) {
-			// Now ignore character case.
-			return response.toLowerCase().equals(answer.toLowerCase());
-		} else {
-			return false;
-		}
+		// We also ignore case differences here.
+		if (response.trim().replaceAll("(\\s)+", "$1").equalsIgnoreCase(answer.trim().replaceAll("(\\s)+", "$1"))) {
+			return true;
+		} else return false;
 	}
 	
 	/**
