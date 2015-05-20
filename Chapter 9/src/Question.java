@@ -46,8 +46,6 @@ public class Question {
 	 * Checks a given response for correctness.
 	 * @param response The response to check.
 	 * @return true if the response was correct, false otherwise.
-	 * 
-	 * TODO: Test this.
 	 */
 	public boolean checkAnswer(String response) {
 		// We want to ignore excess whitespace, but we don't want to wholly ignore whitespace.
