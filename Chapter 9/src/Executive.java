@@ -1,3 +1,6 @@
+/*
+ * Exercise 9.9.
+ */
 public class Executive extends Manager {
 	private int bonus;
 	
