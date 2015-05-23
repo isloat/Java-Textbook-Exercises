@@ -1,3 +1,6 @@
+/*
+ * Exercise 9.9.
+ */
 public class Employee {
 	private String name;
 	private int salary;
