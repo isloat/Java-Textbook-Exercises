@@ -5,6 +5,7 @@ import javax.swing.*;
 public class ButtonFrame2 extends JFrame {
 	private JButton button;
 	private JLabel label;
+	private int n;
 	
 	private static final int FRAME_WIDTH = 300;
 	private static final int FRAME_HEIGHT = 300;
@@ -29,7 +30,8 @@ public class ButtonFrame2 extends JFrame {
 	
 	class ClickListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
-			label.setText("I was clicked.");
+			n++;
+			label.setText("I was clicked " + n + " times.");
 		}
 	}
 	
