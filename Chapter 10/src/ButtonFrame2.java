@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 public class ButtonFrame2 extends JFrame {
 	
 	private static final int FRAME_WIDTH = 300;
-	private static final int FRAME_HEIGHT = 300;
+	private static final int FRAME_HEIGHT = 100;
 	
 	public ButtonFrame2() {
 		createComponents();
@@ -17,11 +17,11 @@ public class ButtonFrame2 extends JFrame {
 	}
 	
 	private void createComponents() {
-		JButton button = new JButton("Click me.");
-		JButton button2 = new JButton("Click me too.");
+		JButton button = new JButton("Alpha");
+		JButton button2 = new JButton("Beta");
 		
-		ActionListener listener = new ClickListener();
-		ActionListener listener2 = new ClickListener();
+		ActionListener listener = new ClickListener("Alpha");
+		ActionListener listener2 = new ClickListener("Beta");
 		button.addActionListener(listener);
 		button2.addActionListener(listener2);
 		
@@ -32,11 +32,17 @@ public class ButtonFrame2 extends JFrame {
 	}
 	
 	class ClickListener implements ActionListener {
-		private int n;
+		// private int n;
+		private String label;
+		
+		public ClickListener(String label) {
+			this.label = label;
+		}
 		
 		public void actionPerformed(ActionEvent event) {
-			n++;
-			System.out.println("I was clicked " + n + " time" + (n >= 2? "s." : "."));
+			// n++;
+			// System.out.println("I was clicked " + n + " time" + (n >= 2? "s." : "."));
+			System.out.println("Button " + label + " was clicked.");
 		}
 	}
 }
