@@ -42,7 +42,7 @@ public class ButtonFrame2 extends JFrame {
 		public void actionPerformed(ActionEvent event) {
 			// n++;
 			// System.out.println("I was clicked " + n + " time" + (n >= 2? "s." : "."));
-			System.out.println("Button " + label + " was clicked.");
+			System.out.println("Button " + label + " was clicked at " + new java.util.Date() + ".");
 		}
 	}
 }
