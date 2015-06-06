@@ -10,23 +10,26 @@ import javax.swing.*;
 
 public class EarthquakeDescription extends JFrame {
     private static final int FRAME_WIDTH = 750;
-    private static final int FRAME_HEIGHT = 250;
+    private static final int FRAME_HEIGHT = 125;
     
     private JLabel fieldLabel;
     private JTextField magnitudeField;
     private JButton displayButton;
     private JLabel earthquakeDescription;
     
+    // Testing.
     public static void main(String[] args) {
         JFrame testFrame = new EarthquakeDescription();
     }
     
-    public EarthquakeDescription() {
-        this.createComponents();
+    // Create frame, components, and set attributes.
+    public EarthquakeDescription() {        
+    	this.createComponents();
         this.createPanel();
+        
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
+    	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	this.setVisible(true);
     }
 
     private void createComponents() {
@@ -40,7 +43,7 @@ public class EarthquakeDescription extends JFrame {
     }
 
     private void createDisplayButton() {
-        displayButton = new JButton("Display: ");
+        displayButton = new JButton("How powerful is this quake?: ");
         displayButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -78,6 +81,7 @@ public class EarthquakeDescription extends JFrame {
             this.createDescription();
         }
 
+        // TODO: find a way to wrap text? 
         private void createDescription() throws Exception {
             if (magnitudeLevel <= 0) {
                 throw new Exception();
