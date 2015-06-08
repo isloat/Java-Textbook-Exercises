@@ -12,7 +12,7 @@ import javax.swing.*;
 
 public class DataSetStatistics extends JFrame {
     private static final int FRAME_WIDTH = 300;
-    private static final int FRAME_HEIGHT = 250;
+    private static final int FRAME_HEIGHT = 150;
     
     private JLabel inputLabel;
     private JTextField inputField;
