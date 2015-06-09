@@ -46,6 +46,7 @@ public class DataSetStatistics extends JFrame {
         this.setVisible(true);
     }
 
+    // Create labels and initialize button creation.
     private void createComponents() {
         final int INPUT_FIELD_SIZE = 10;
         
@@ -64,6 +65,7 @@ public class DataSetStatistics extends JFrame {
         this.createButton();
     }
 
+    // Create button and action listener.
     private void createButton() {
         this.submitButton = new JButton("Submit");
         this.submitButton.addActionListener(new ActionListener() {
@@ -92,6 +94,7 @@ public class DataSetStatistics extends JFrame {
         });
     }
 
+    // Track sum for calculations.
     private double setSum() {
         double sum = 0;
         
@@ -102,6 +105,7 @@ public class DataSetStatistics extends JFrame {
         return sum;
     }
 
+    // Set and enable everything.
     private void createPanel() {
         JPanel panel = new JPanel();
         
