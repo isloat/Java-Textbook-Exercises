@@ -46,7 +46,7 @@ public class CalculateSavings extends JFrame {
         this.inputNumberYears = new JLabel("Number of years: ");
         this.inputNumberYearsField = new JTextField(INPUT_FIELD_SIZE);
         
-        this.createButton();
+        //this.createButton();
     }
     
     // Create button and action listeners.
@@ -73,6 +73,8 @@ public class CalculateSavings extends JFrame {
         panel.add(this.inputNumberYears);
         panel.add(this.inputNumberYearsField);
         
-        panel.add(this.calculateButton);
+        //panel.add(this.calculateButton);
+        
+        this.add(panel);
     }
 }
