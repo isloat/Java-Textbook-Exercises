@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-/*  10.9: Create a graphical app for computing statistics of a data set.
+/*  10.11: Create a graphical app for computing statistics of a data set.
  *  Supply text fields and buttons for adding floating point values. Display the
  *  current minimum, maximum, and average in a label.
  */
