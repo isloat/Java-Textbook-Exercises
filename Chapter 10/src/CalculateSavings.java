@@ -4,21 +4,24 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-/*  10.12: Create a graphical app for computing statistics of a data set.
- *  Supply text fields and buttons for adding floating point values. Display the
- *  current minimum, maximum, and average in a label.
+/*  10.12: Write an application with three labeled text fields,
+ *  one each for the initial amount of a savings account, the 
+ *  annual interest rate, and the number of years. Add a button
+ *  "Calculate" and a read-only text area to display the balance of the 
+ *  savings account after the end of each year.
  */
 public class CalculateSavings extends JFrame {
     private static final int FRAME_WIDTH = 300;
     private static final int FRAME_HEIGHT = 500;
     
-    private JLabel inputInitialBalanceLabel;
-    private JLabel inputAnnualInterestRate;
-    private JLabel inputNumberYears;
-    private JTextField inputInitialBalanceLabelField;
-    private JTextField inputAnnualInterestRateField;
-    private JTextField inputNumberYearsField;
+    private JLabel inputBalanceLabel;
+    private JLabel inputInterestRateLabel;
+    private JLabel inputYearsLabel;
+    private JTextField inputBalanceField;
+    private JTextField inputInterestRateField;
+    private JTextField inputYearsField;
     private JButton calculateButton;
+    private JLabel output;
     
     // Testing.
     public static void main(String[] args) {
@@ -39,14 +42,16 @@ public class CalculateSavings extends JFrame {
     private void createComponents() {
         final int INPUT_FIELD_SIZE = 10;
         
-        this.inputInitialBalanceLabel = new JLabel("Initial balance: ");
-        this.inputInitialBalanceLabelField = new JTextField(INPUT_FIELD_SIZE);
-        this.inputAnnualInterestRate = new JLabel("Annual interest rate: ");
-        this.inputAnnualInterestRateField = new JTextField(INPUT_FIELD_SIZE);
-        this.inputNumberYears = new JLabel("Number of years: ");
-        this.inputNumberYearsField = new JTextField(INPUT_FIELD_SIZE);
+        this.inputBalanceLabel = new JLabel("Initial balance: ");
+        this.inputBalanceField = new JTextField(INPUT_FIELD_SIZE);
+        this.inputInterestRateLabel = new JLabel("Annual interest rate: ");
+        this.inputInterestRateField = new JTextField(INPUT_FIELD_SIZE);
+        this.inputYearsLabel = new JLabel("Number of years: ");
+        this.inputYearsField = new JTextField(INPUT_FIELD_SIZE);
         
-        //this.createButton();
+        this.output = new JLabel("");
+        
+        this.createButton();
     }
     
     // Create button and action listeners.
@@ -55,25 +60,59 @@ public class CalculateSavings extends JFrame {
         this.calculateButton.addActionListener(new ActionListener() {
         	
             public void actionPerformed(ActionEvent e) {
-                try {
-                } catch (Exception exception) {
-                }
+            	double initialBalance = Double.parseDouble(inputBalanceField.getText());
+            	double interestRate = Double.parseDouble(inputInterestRateField.getText());
+            	double years = Double.parseDouble(inputYearsField.getText());
+            	double balanceAccrued = initialBalance;
+            	
+            	String balanceOverTime = "Year 0: Balance: " + balanceAccrued;
+            	
+            	for (int i = 1; i <= years; i++) {
+            		balanceAccrued += balanceAccrued * interestRate;
+            		balanceOverTime += "\nYear " + i + ": Balance: " + balanceAccrued;
+            	}
+            	
+            	output.setText(balanceOverTime);
+            	// output.setUI(MultiLineLabelUI.labelUI);
             }
         });
     }
+            	
+//                try {
+//                	double initialBalance = Double.parseDouble(inputBalanceField.getText());
+//                	double interestRate = Double.parseDouble(inputInterestRateField.getText());
+//                	int years = Integer.getInteger(inputYearsField.getText());
+//                	double balanceAccrued = initialBalance;
+//                	
+//                	String balanceOverTime = "Year 0: Balance: " + balanceAccrued;
+//                	
+//                	for (int i = 0; i < years; i++) {
+//                		balanceAccrued += balanceAccrued * interestRate;
+//                		balanceOverTime += "\nYear " + i + ": Balance: " + balanceAccrued;
+//                	}
+//                	
+//                	output.setText(balanceOverTime);
+//                } catch (Exception exception) {
+//                	JOptionPane.showMessageDialog(null, "Not a number!", "Invalid input", JOptionPane.ERROR_MESSAGE);
+//                }
+//            }
+//        });
+//    }
     
     // Set and enable everything.
     private void createPanel() {
         JPanel panel = new JPanel();
         
-        panel.add(this.inputInitialBalanceLabel);
-        panel.add(this.inputInitialBalanceLabelField);
-        panel.add(this.inputAnnualInterestRate);
-        panel.add(this.inputAnnualInterestRateField);
-        panel.add(this.inputNumberYears);
-        panel.add(this.inputNumberYearsField);
+        panel.add(this.inputBalanceLabel);
+        panel.add(this.inputBalanceField);
+        panel.add(this.inputInterestRateLabel);
+        panel.add(this.inputInterestRateField);
+        panel.add(this.inputYearsLabel);
+        panel.add(this.inputYearsField);
         
-        //panel.add(this.calculateButton);
+        panel.add(this.calculateButton);
+        
+        panel.add(this.output);
         
         this.add(panel);
     }
