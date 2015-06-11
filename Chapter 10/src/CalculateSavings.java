@@ -21,7 +21,7 @@ public class CalculateSavings extends JFrame {
     private JTextField inputInterestRateField;
     private JTextField inputYearsField;
     private JButton calculateButton;
-    private JLabel output;
+    private JTextArea outputArea;
     
     // Testing.
     public static void main(String[] args) {
@@ -49,7 +49,8 @@ public class CalculateSavings extends JFrame {
         this.inputYearsLabel = new JLabel("Number of years: ");
         this.inputYearsField = new JTextField(INPUT_FIELD_SIZE);
         
-        this.output = new JLabel("");
+        this.outputArea = new JTextArea(15, 20);
+        this.outputArea.setEditable(false);
         
         this.createButton();
     }
@@ -65,14 +66,15 @@ public class CalculateSavings extends JFrame {
             	double years = Double.parseDouble(inputYearsField.getText());
             	double balanceAccrued = initialBalance;
             	
-            	String balanceOverTime = "Year 0: Balance: " + balanceAccrued;
+            	String balanceOverTime = "Initial balance: " + balanceAccrued;
             	
             	for (int i = 1; i <= years; i++) {
             		balanceAccrued += balanceAccrued * interestRate;
-            		balanceOverTime += "\nYear " + i + ": Balance: " + balanceAccrued;
+            		balanceAccrued = Math.floor(balanceAccrued * 100) / 100;
+            		balanceOverTime += "\nYear " + i + " balance: " + balanceAccrued;
             	}
             	
-            	output.setText(balanceOverTime);
+            	outputArea.setText(balanceOverTime);
             }
         });
     }
@@ -90,7 +92,7 @@ public class CalculateSavings extends JFrame {
         
         panel.add(this.calculateButton);
         
-        panel.add(this.output);
+        panel.add(this.outputArea);
         
         this.add(panel);
     }
