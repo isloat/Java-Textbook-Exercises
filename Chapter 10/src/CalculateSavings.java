@@ -73,31 +73,9 @@ public class CalculateSavings extends JFrame {
             	}
             	
             	output.setText(balanceOverTime);
-            	// output.setUI(MultiLineLabelUI.labelUI);
             }
         });
     }
-            	
-//                try {
-//                	double initialBalance = Double.parseDouble(inputBalanceField.getText());
-//                	double interestRate = Double.parseDouble(inputInterestRateField.getText());
-//                	int years = Integer.getInteger(inputYearsField.getText());
-//                	double balanceAccrued = initialBalance;
-//                	
-//                	String balanceOverTime = "Year 0: Balance: " + balanceAccrued;
-//                	
-//                	for (int i = 0; i < years; i++) {
-//                		balanceAccrued += balanceAccrued * interestRate;
-//                		balanceOverTime += "\nYear " + i + ": Balance: " + balanceAccrued;
-//                	}
-//                	
-//                	output.setText(balanceOverTime);
-//                } catch (Exception exception) {
-//                	JOptionPane.showMessageDialog(null, "Not a number!", "Invalid input", JOptionPane.ERROR_MESSAGE);
-//                }
-//            }
-//        });
-//    }
     
     // Set and enable everything.
     private void createPanel() {
