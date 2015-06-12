@@ -14,6 +14,8 @@ public class CalculateSavings extends JFrame {
     private static final int FRAME_WIDTH = 300;
     private static final int FRAME_HEIGHT = 500;
     
+    // Declare our labels, input field, and output text area.
+    // And also the button to engage.
     private JLabel inputBalanceLabel;
     private JLabel inputInterestRateLabel;
     private JLabel inputYearsLabel;
@@ -60,6 +62,9 @@ public class CalculateSavings extends JFrame {
         this.calculateButton = new JButton("Calculate");
         this.calculateButton.addActionListener(new ActionListener() {
         	
+        	// Take input from the fields, and run calculations based on them.
+        	// Interest will accrue yearly. 
+        	// Each separate year's balance will go in outputArea.
             public void actionPerformed(ActionEvent e) {
             	double initialBalance = Double.parseDouble(inputBalanceField.getText());
             	double interestRate = Double.parseDouble(inputInterestRateField.getText());
