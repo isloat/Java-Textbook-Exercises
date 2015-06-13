@@ -15,11 +15,3 @@ public class NameDraw {
 		
 	}
 }
-
-public class NameViewer() {
-	
-}
-
-public class NameComponent() {
-	
-}
