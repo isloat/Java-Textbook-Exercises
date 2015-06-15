@@ -11,4 +11,7 @@ import javax.swing.*;
  */
 public class NameComponent {
 
+	public NameComponent() {
+		
+	}
 }
