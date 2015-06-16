@@ -9,21 +9,16 @@ import javax.swing.*;
  * contained inside a blue rectangle. Provide a class NameViewer
  * and a class NameComponent.
  */
-public class NameViewer extends JFrame {
-	private static final int FRAME_WIDTH = 300;
-	private static final int FRAME_HEIGHT = 100;
-	
+public class NameViewer {
 	public static void main(String[] args) {
-		JFrame testFrame = new NameViewer();
-	}
-	
-	public NameViewer() {
-		this.createComponents();
-		this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		this.setVisible(true);
-	}
-	
-	public void createComponents() {
+		JFrame testFrame = new JFrame();
 		
+		testFrame.setSize(300, 100);
+		testFrame.setTitle("Name Viewer");
+		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		NameComponent component = new NameComponent();
+		testFrame.add(component);
+		testFrame.setVisible(true);
 	}
 }
