@@ -10,17 +10,6 @@ import javax.swing.*;
  * and a class NameComponent.
  */
 public class NameComponent extends JComponent {
-//	private static final int FRAME_WIDTH = 300;
-//	private static final int FRAME_HEIGHT = 100;
-//	
-//	public NameComponent() {
-//	    this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-//	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//	    this.setVisible(true);
-//	    
-//	    this.createComponents();
-//	}
-
 	public void createComponents(Graphics graphics) {
 		Graphics2D graphics2 = (Graphics2D) graphics;
 		
