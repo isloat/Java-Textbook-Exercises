@@ -10,7 +10,7 @@ import javax.swing.*;
  * and a class NameComponent.
  */
 public class NameComponent extends JComponent {
-	public void createComponents(Graphics graphics) {
+	public void paint(Graphics graphics) {
 		Graphics2D graphics2 = (Graphics2D) graphics;
 		
 		int width = this.getWidth() - 10;
@@ -19,6 +19,7 @@ public class NameComponent extends JComponent {
 		int y = 5;
 		graphics2.setColor(Color.blue);
 		graphics2.fillRect(x, y, width, height);
+		graphics2.drawRect(x, y, width, height);
 		
 		String name = "Isaac Sloat";
 		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(name, graphics2);
