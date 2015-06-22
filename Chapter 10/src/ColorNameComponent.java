@@ -21,7 +21,20 @@ public class ColorNameComponent extends JComponent {
 		graphics2.fillRect(x, y, width, height);
 		graphics2.drawRect(x, y, width, height);
 		
-		String name = "Isaac Sloat";
+		// All the Standard colors from Java.awt.Color, except for WHITE.
+		String colorName1 = "BLACK";
+		String colorName2 = "BLUE";
+		String colorName3 = "CYAN";
+		String colorName4 = "DARK GRAY";
+		String colorName5 = "GRAY";
+		String colorName6 = "GREEN";
+		String colorName7 = "LIGHT GRAY";
+		String colorName8 = "MAGENTA";
+		String colorName9 = "ORANGE";
+		String colorNameA = "PINK";
+		String colorNameB = "RED";
+		String colorNameC = "YELLOW";
+		
 		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(name, graphics2);
 		
 		x = (int) (x + width / 2 - stringBounds.getCenterX());
