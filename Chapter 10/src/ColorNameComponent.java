@@ -17,7 +17,7 @@ public class ColorNameComponent extends JComponent {
 		int height = this.getHeight() - 10;
 		int x = 5;
 		int y = 5;
-		graphics2.setColor(Color.blue);
+		graphics2.setColor(new Color(156, 93, 82));
 		graphics2.fillRect(x, y, width, height);
 		graphics2.drawRect(x, y, width, height);
 		
@@ -38,30 +38,42 @@ public class ColorNameComponent extends JComponent {
 		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(colorName7, graphics2);
 		
 		x = (int) (x + width / 2 - stringBounds.getCenterX());
-	    y = (int) (y + height / 2 - stringBounds.getCenterY());
+	    y = (int) (height / 6);
 	    graphics2.setColor(Color.BLACK);
 	    graphics2.drawString(colorName1, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.BLUE);
 	    graphics2.drawString(colorName2, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.CYAN);
 	    graphics2.drawString(colorName3, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.DARK_GRAY);
 	    graphics2.drawString(colorName4, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.GRAY);
 	    graphics2.drawString(colorName5, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.GREEN);
 	    graphics2.drawString(colorName6, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.LIGHT_GRAY);
 	    graphics2.drawString(colorName7, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.MAGENTA);
 	    graphics2.drawString(colorName8, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.ORANGE);
 	    graphics2.drawString(colorName9, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.PINK);
 	    graphics2.drawString(colorNameA, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.RED);
 	    graphics2.drawString(colorNameB, x, y);
+	    y += 15;
 	    graphics2.setColor(Color.YELLOW);
 	    graphics2.drawString(colorNameC, x, y);
+	    y += 15;
 	}
 }
