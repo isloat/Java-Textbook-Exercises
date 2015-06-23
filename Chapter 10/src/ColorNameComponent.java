@@ -39,7 +39,29 @@ public class ColorNameComponent extends JComponent {
 		
 		x = (int) (x + width / 2 - stringBounds.getCenterX());
 	    y = (int) (y + height / 2 - stringBounds.getCenterY());
-	    graphics2.setColor(Color.red);
-	    graphics2.drawString(name, x, y);
+	    graphics2.setColor(Color.BLACK);
+	    graphics2.drawString(colorName1, x, y);
+	    graphics2.setColor(Color.BLUE);
+	    graphics2.drawString(colorName2, x, y);
+	    graphics2.setColor(Color.CYAN);
+	    graphics2.drawString(colorName3, x, y);
+	    graphics2.setColor(Color.DARK_GRAY);
+	    graphics2.drawString(colorName4, x, y);
+	    graphics2.setColor(Color.GRAY);
+	    graphics2.drawString(colorName5, x, y);
+	    graphics2.setColor(Color.GREEN);
+	    graphics2.drawString(colorName6, x, y);
+	    graphics2.setColor(Color.LIGHT_GRAY);
+	    graphics2.drawString(colorName7, x, y);
+	    graphics2.setColor(Color.MAGENTA);
+	    graphics2.drawString(colorName8, x, y);
+	    graphics2.setColor(Color.ORANGE);
+	    graphics2.drawString(colorName9, x, y);
+	    graphics2.setColor(Color.PINK);
+	    graphics2.drawString(colorNameA, x, y);
+	    graphics2.setColor(Color.RED);
+	    graphics2.drawString(colorNameB, x, y);
+	    graphics2.setColor(Color.YELLOW);
+	    graphics2.drawString(colorNameC);
 	}
 }
