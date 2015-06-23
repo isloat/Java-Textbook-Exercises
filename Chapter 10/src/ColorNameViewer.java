@@ -13,7 +13,7 @@ public class ColorNameViewer {
 	public static void main(String[] args) {
 		JFrame testFrame = new JFrame();
 		
-		testFrame.setSize(300, 100);
+		testFrame.setSize(200, 250);
 		testFrame.setTitle("Name Viewer");
 		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
