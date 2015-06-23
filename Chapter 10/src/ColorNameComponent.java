@@ -35,7 +35,7 @@ public class ColorNameComponent extends JComponent {
 		String colorNameB = "RED";
 		String colorNameC = "YELLOW";
 		
-		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(name, graphics2);
+		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(colorName7, graphics2);
 		
 		x = (int) (x + width / 2 - stringBounds.getCenterX());
 	    y = (int) (y + height / 2 - stringBounds.getCenterY());
@@ -62,6 +62,6 @@ public class ColorNameComponent extends JComponent {
 	    graphics2.setColor(Color.RED);
 	    graphics2.drawString(colorNameB, x, y);
 	    graphics2.setColor(Color.YELLOW);
-	    graphics2.drawString(colorNameC);
+	    graphics2.drawString(colorNameC, x, y);
 	}
 }
