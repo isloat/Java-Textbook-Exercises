@@ -13,6 +13,7 @@ public class ColorNameViewer {
 	public static void main(String[] args) {
 		JFrame testFrame = new JFrame();
 		
+		// TODO: Make this more intelligent than hardcoded numbers.
 		testFrame.setSize(200, 250);
 		testFrame.setTitle("Name Viewer");
 		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
