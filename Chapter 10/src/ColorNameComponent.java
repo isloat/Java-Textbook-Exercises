@@ -37,7 +37,7 @@ public class ColorNameComponent extends JComponent {
 		
 		Rectangle2D stringBounds = graphics2.getFontMetrics().getStringBounds(colorName7, graphics2);
 		
-		// A very messy update of all the names.
+		// A very messy list of all the names.
 		// TODO: Figure out how to clean this up. 
 		x = (int) (x + width / 2 - stringBounds.getCenterX());
 	    y = (int) (height / 6);
