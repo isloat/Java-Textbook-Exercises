@@ -13,9 +13,9 @@ public class ColorNameViewer {
 	public static void main(String[] args) {
 		JFrame testFrame = new JFrame();
 		
-		// TODO: Make this more intelligent than hardcoded numbers.
+		// TODO: Possible to make this more intelligent than hardcoded numbers?
 		testFrame.setSize(200, 250);
-		testFrame.setTitle("Name Viewer");
+		testFrame.setTitle("Viewer for Colored Names");
 		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		ColorNameComponent component = new ColorNameComponent();
