@@ -14,7 +14,7 @@ public class ColorNameViewer {
 		JFrame testFrame = new JFrame();
 		
 		// TODO: Possible to make this more intelligent than hardcoded numbers?
-		testFrame.setSize(200, 250);
+		testFrame.setSize(200, 275);
 		testFrame.setTitle("Viewer for Colored Names");
 		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
