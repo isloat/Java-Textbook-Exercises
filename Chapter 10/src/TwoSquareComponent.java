@@ -16,5 +16,17 @@ import javax.swing.*;
 public class TwoSquareComponent extends JComponent {
 	public void paint(Graphics graphics) {
 		Graphics2D graphics2 = (Graphics2D) graphics;
+		
+		int squareSize = this.getWidth() / 5;
+		int x = 5;
+		int y = this.getHeight() / 4;
+		graphics2.setColor(Color.PINK);
+		graphics2.drawRect(x, y, squareSize, squareSize);
+		graphics2.fillRect(x, y, squareSize, squareSize);
+		
+		Color purple = new Color(127, 0, 255);
+		graphics2.setColor(purple);
+		graphics2.drawRect((int) ((x + squareSize) * 1.5), y, squareSize, squareSize);
+		graphics2.fillRect((int) ((x + squareSize) * 1.5), y, squareSize, squareSize);
 	}
 }
