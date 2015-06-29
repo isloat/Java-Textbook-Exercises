@@ -13,7 +13,7 @@ public class TwoSquareViewer {
 	public static void main(String[] args) {
 		JFrame testFrame = new JFrame();
 		
-		testFrame.setSize(200, 275);
+		testFrame.setSize(250, 200);
 		testFrame.setTitle("Viewer for Two Squares");
 		testFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
