@@ -18,8 +18,8 @@ public class ColorNameComponent extends JComponent {
 		int x = 5;
 		int y = 5;
 		graphics2.setColor(new Color(156, 93, 82));
-		graphics2.fillRect(x, y, width, height);
 		graphics2.drawRect(x, y, width, height);
+		graphics2.fillRect(x, y, width, height);
 		
 		// All the Standard colors from Java.awt.Color, except for WHITE.
 		String colorName1 = "BLACK";
